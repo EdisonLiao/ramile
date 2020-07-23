@@ -5,7 +5,7 @@ from ramile.processors.double_slash_comment_filter import DoubleSlashCommentFilt
 
 
 class JavaProcessor(FileProcessorBase):
-    expected_extensions = ['.java']
+    expected_extensions = ['.java','.kt']
 
     def __init__(self):
         self.filters.append(BlankLineFilter())
