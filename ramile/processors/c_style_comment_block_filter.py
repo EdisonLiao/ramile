@@ -11,11 +11,19 @@ class CStyleCommentBlockFilter(LineFilterBase):
             if line.endswith('*/'):
                 file.mark_comment_block_end()
             return line, True
-        else:
-            if line.startswith('/*'):
+        else if line.startswith('/*'):
                 file.found_comment_line()
                 file.mark_comment_block_start()
                 if line.endswith('*/'):
                     file.mark_comment_block_end()
                 return line, True
+        else if line.startswith('//')
+                file.found_comment_line
+                file.mark_comment_block_start
+                return line,True
+        else if line.endswith('//')
+                file.found_comment_line
+                file.mark_comment_block_end
+                return line,True
+        else:                
         return line, False

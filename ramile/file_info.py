@@ -6,6 +6,7 @@ class FileInfo(object):
     blank_lines = 0
     comment_lines = 0
     extracted_lines = 0
+    import_packages_lines = 0
 
     def __init__(self, file_path, file_name, file_extension):
         self.file_path = file_path
@@ -34,4 +35,4 @@ class FileInfo(object):
 
     def mark_comment_block_end(self):
         self.is_in_comment_block = False
-        return
+        return    
